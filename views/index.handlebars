@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" method="get">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-6">
+            <h1>Pizza Perfect</h1>
+
+        </div>
+        <div class="col-2"></div>
+    </div> <!-- 1sr row-->
+
+
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <h5>Shopping Cart</h5>
+        </div>
+        <div class="col-4"></div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-4">
+            <h5>Small</h5>
+        </div>
+
+        <div class="col-2">
+                <input type="submit" value="+" formaction="/addSmall" class="btn btn-secondary">            
+        </div>
+        <div class="col-2">
+            <input type="submit" value="-" formaction="/subSmall" class="btn btn-secondary">
+        </div>
+        <div class="col-4">
+            <h5>R{{small}}</h5>
+        </div>
+    </div>
+
+
+
+
+    <div class="row">
+        <div class="col-4">
+            <h5>Medium</h5>
+        </div>
+        <div class="col-2">
+            <input type="submit" value="+" formaction="/addMedium" class="btn btn-secondary">
+               
+            </div>
+
+        
+        <div class="col-2">
+            <input type="submit" value="-" formaction="/subMedium" class="btn btn-secondary">
+            
+        </div>
+        <div class="col-4">
+            <h5>R{{medium}}</h5>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <h5>Large</h5>
+        </div>
+        <div class="col-2">
+           
+                <input type="submit" value="+" formaction="/addLarge" class="btn btn-secondary">
+                
+          
+        </div>
+        <div class="col-2">
+             <input type="submit" value="-" formaction="/subLarge" class="btn btn-secondary">
+        </div>
+        
+        <div class="col-4">
+            <h5>R{{large}}</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <h6>total :R{{total}} </h6>
+        </div>
+        <div class="col-4">
+                
+            </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <div class="checkout-div">
+                <h5>Checkout</h5>
+            </div>
+        </div>
+        <div class="col-4"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+
+            <div class="pizza-div">
+                <h6>Large Pizza</h6>
+                <span>
+                    <h6>price :R{{largePrice}}</h6>
+                </span>
+            </div>
+
+        </div>
+
+        <div class="col-4">
+
+            <div class="pizza-div">
+                <h6>Medium Pizza</h6>
+                <span>
+                    <h6>price :R{{mediumPrice}}</h6>
+                </span>
+            </div>
+
+        </div>
+
+
+        <div class="col-4">
+
+            <div class="pizza-div">
+                <h6>Small Pizza</h6>
+                <span>
+                    <h6>price :R{{smallPrice}}</h6>
+                </span>
+            </div>
+
+
+        </div>
+
+    </div>
+    </form>
+    <form action="/count" method="post">
+
+        <input type="submit" value="Press button to count">
+
+    </form>
+
+    </div>
+</body>
+
+</html>
