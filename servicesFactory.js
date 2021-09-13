@@ -1,4 +1,4 @@
-module.exports = function servicesFactoy(pool){
+module.exports = function servicesFactory(pool){
 
 let smallPizza = 31.99;
 let mediumPizza = 58.99;
@@ -59,9 +59,7 @@ function subLargePizza(){
     
 }
 
-function removeTotals(){
 
-}
 function getSmallPizza(){
     
    
@@ -88,7 +86,7 @@ function getPizzaPriceSmall(){
     return smallPizza
 
 }
-function getPizaaPriceMedium(){
+function getPizzaPriceMedium(){
     return mediumPizza
 }
 function getPizzaPriceLarge(){
@@ -97,8 +95,7 @@ function getPizzaPriceLarge(){
 }
 
     return{
-        // addTotals,
-        removeTotals,
+        
         getSmallPizza,
         getMediumPizza,
         getLargePizza,
@@ -107,7 +104,7 @@ function getPizzaPriceLarge(){
         addMediumPizza,
         addLargePizza,
         getPizzaPriceSmall,
-        getPizaaPriceMedium,
+        getPizzaPriceMedium,
         getPizzaPriceLarge,
         subSmallPizza,
         subMediumPizza,

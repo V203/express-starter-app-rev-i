@@ -4,7 +4,7 @@ const exphbs  = require('express-handlebars');
 const app = express();
 const PORT =  process.env.PORT || 3017;
 const pg = require("pg");
-const ServicesFactoy = require("./servicesFactory")
+const ServicesFactory = require("./servicesFactory")
 const Pool = pg.Pool;
 const connectionString = process.env.DATABASE_URL || 'postgresql://codex-coder:pg123@localhost:5432/db';
 // const session = require("express-session");
@@ -26,55 +26,55 @@ app.use(express.static('public'));
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
-let servicesFactoy = ServicesFactoy(pool)
+let servicesFactory = ServicesFactory(pool)
 
 
 let counter = 0;
 
 app.get('/', function(req, res) {
 	res.render('index', {
-		small:servicesFactoy.getSmallPizza(),
-		medium:servicesFactoy.getMediumPizza(),
-		large:servicesFactoy.getLargePizza(),
-		total:servicesFactoy.getTotal(),
-		smallPrice:servicesFactoy.getPizzaPriceSmall(),
-		mediumPrice:servicesFactoy.getPizaaPriceMedium(),
-		largePrice:servicesFactoy.getPizzaPriceLarge()
+		small:servicesFactory.getSmallPizza(),
+		medium:servicesFactory.getMediumPizza(),
+		large:servicesFactory.getLargePizza(),
+		total:servicesFactory.getTotal(),
+		smallPrice:servicesFactory.getPizzaPriceSmall(),
+		mediumPrice:servicesFactory.getPizzaPriceMedium(),
+		largePrice:servicesFactory.getPizzaPriceLarge()
 	});
 });
 
 app.get("/addSmall",(req,res)=>{
-	servicesFactoy.addSmallPizza();
+	servicesFactory.addSmallPizza();
 	res.redirect("/")
 	
 })
 
 app.get("/addMedium",(req,res)=>{
-	servicesFactoy.addMediumPizza();
+	servicesFactory.addMediumPizza();
 	res.redirect("/")
 
 })
 
 app.get("/addLarge",(req,res)=>{
-	servicesFactoy.addLargePizza();
+	servicesFactory.addLargePizza();
 	res.redirect("/")
 })
 
 
 app.get("/subSmall",(req,res)=>{
-	servicesFactoy.subSmallPizza()
+	servicesFactory.subSmallPizza()
 	res.redirect("/")
 
 })
 
 app.get("/subMedium",(req,res)=>{
-	servicesFactoy.subMediumPizza()
+	servicesFactory.subMediumPizza()
 	res.redirect("/")
 
 })
 
 app.get("/subLarge",(req,res)=>{
-	servicesFactoy.subLargePizza()
+	servicesFactory.subLargePizza()
 	res.redirect("/")
 
 })
