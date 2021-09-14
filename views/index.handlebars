@@ -9,7 +9,15 @@
 </head>
 
 <body>
+    
     <form action="" method="get">
+
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4"><h6>Hello {{user}}</h6></div>
+            <div class="col-4"></div>
+        </div>
+        
     <div class="row">
         <div class="col-4"></div>
         <div class="col-6">
@@ -99,7 +107,8 @@
         <div class="col-4"></div>
         <div class="col-4">
             <div class="checkout-div">
-                <h5>Checkout</h5>
+                
+                <input type="submit" value="Checkout" class="btn btn-dark" formaction="/order">
             </div>
         </div>
         <div class="col-4"></div>
@@ -110,9 +119,13 @@
 
             <div class="pizza-div">
                 <h6>Large Pizza</h6>
-                <span>
-                    <h6>price :R{{largePrice}}</h6>
-                </span>
+                    <span>
+                        <h6>price :R{{largePrice}}</h6>
+                    </span>
+                
+                    <i class='fas fa-pizza-slice' style='font-size:48px'></i>
+                
+                
             </div>
 
         </div>
@@ -123,7 +136,9 @@
                 <h6>Medium Pizza</h6>
                 <span>
                     <h6>price :R{{mediumPrice}}</h6>
+                    
                 </span>
+                <i class='fas fa-pizza-slice' style='font-size:36px'></i>
             </div>
 
         </div>
@@ -133,9 +148,10 @@
 
             <div class="pizza-div">
                 <h6>Small Pizza</h6>
-                <span>
-                    <h6>price :R{{smallPrice}}</h6>
-                </span>
+                    <span>
+                        <h6>price :R{{smallPrice}}</h6>
+                    </span>
+                <i class='fas fa-pizza-slice' style='font-size:24px'></i>
             </div>
 
 
@@ -143,11 +159,7 @@
 
     </div>
     </form>
-    <form action="/count" method="post">
-
-        <input type="submit" value="Press button to count">
-
-    </form>
+   
 
     </div>
 </body>

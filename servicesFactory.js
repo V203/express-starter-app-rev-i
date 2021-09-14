@@ -10,51 +10,48 @@ let mediumPizzaTotal = 0;
 let largePizzaTotal = 0
 
 
-// function addTotals(par){
+const order = {}
 
-//     if(par === "large"){
-//         totalPizza += largePizza
-//     }else if(par=== "medium"){
-//         totalPizza += mediumPizza
-
-//     }else if(par === "small"){
-//         totalPizza += smallPizza
-//     }
-    
-// }
-
+// var username ='';
 function addSmallPizza(){
-    return  smallPizzaTotal += smallPizza
+      smallPizzaTotal += smallPizza
 }
 
 function addMediumPizza(){
-    return  mediumPizzaTotal += mediumPizza
+      mediumPizzaTotal += mediumPizza
 
 }
 
 function addLargePizza(){
- return   largePizzaTotal += largePizza
+    largePizzaTotal += largePizza
     
 }
 
 function subSmallPizza(){
-    if(smallPizzaTotal !== 0){
-        return smallPizzaTotal -= smallPizza
+    if(smallPizzaTotal !== 0.00){
+         smallPizzaTotal -= smallPizza
+    }else{
+        smallPizzaTotal = 0.00
     }
+   
     
 
 }
 function subMediumPizza(){
-    if(mediumPizzaTotal !== 0){
-        return mediumPizzaTotal -= mediumPizza
+    if(mediumPizzaTotal !== 0.00){
+         mediumPizzaTotal -= mediumPizza
+    }else{
+        mediumPizzaTotal = 0.00
     }
     
 
 }
 
 function subLargePizza(){
-    if(largePizzaTotal !== 0 ){
-        return largePizzaTotal -= largePizza
+    if(largePizzaTotal !== 0.00 ){
+         largePizzaTotal -= largePizza
+    }else{
+        largePizzaTotal = 0.00
     }
     
 }
@@ -94,8 +91,24 @@ function getPizzaPriceLarge(){
 
 }
 
+function getUserName(par){
+    return par
+}
+
+function orderFun(){
+    order["ID"] =Math.floor(Math.random() * 10).toFixed()
+    order["amount"] = totalPizza;
+    
+    // order["status"] = 
+    
+
+}
+function getOrder(){
+    return order
+}
+
     return{
-        
+        orderFun,
         getSmallPizza,
         getMediumPizza,
         getLargePizza,
@@ -108,7 +121,10 @@ function getPizzaPriceLarge(){
         getPizzaPriceLarge,
         subSmallPizza,
         subMediumPizza,
-        subLargePizza
+        subLargePizza,
+        getUserName,
+        getOrder
+
 
     }
 }
